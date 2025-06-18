@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  gap: 1rem;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin: 6px 20px;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .message {
+    font-size: 1.2rem;
+  }
+}
