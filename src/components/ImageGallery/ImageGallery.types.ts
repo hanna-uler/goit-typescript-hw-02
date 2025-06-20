@@ -6,12 +6,12 @@ type Img = {
     };
     alt_description: string;
     user: {
-        profile_image: {
+        profile_image?: {
             small: string;
         };
         name: string;
-        portfolio_url: string;
-        instagram_username: string;
+        portfolio_url?: string;
+        instagram_username?: string;
     };
     likes: number;
 }

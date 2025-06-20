@@ -27,14 +27,14 @@ const customStyles = {
 }
 
 export default function App() {
-  const [pictures, setPictures] = useState([]);
+  const [pictures, setPictures] = useState<Img[]>([] as Img[]);
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [imgCaption, setImgCaption] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imgCaption, setImgCaption] = useState<string | null> (null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   Modal.setAppElement('#root');
@@ -97,7 +97,8 @@ export default function App() {
       <Toaster
         position="top-right"
         reverseOrder={false}
-        duration="3000" />
+        toastOptions={{ duration: 3000 }}
+      />
       <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
