@@ -34,7 +34,7 @@ export default function App() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [imgCaption, setImgCaption] = useState<string | null> (null);
+  const [imgCaption, setImgCaption] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   Modal.setAppElement('#root');
@@ -79,7 +79,7 @@ export default function App() {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage(null);
-    setImgCaption(null);
+    setImgCaption("");
   };
   
   return (
