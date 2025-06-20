@@ -1,7 +1,7 @@
 import css from "./ImageCard.module.css"
 import { IoLogoInstagram } from "react-icons/io5";
 
-export default function ImageCard({imageUrl, alt, authorImage, authorName, portfolioUrl, instagram, likes }: imgCardProps) {
+export default function ImageCard({imageUrl, alt, authorImage, authorName, portfolioUrl, instagram, likes }: ImgCardProps) {
     
     const instaLink = `https://www.instagram.com/${instagram}`;
     return (

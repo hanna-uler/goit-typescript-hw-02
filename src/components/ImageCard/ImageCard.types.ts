@@ -1,4 +1,4 @@
-type imgCardProps = {
+type ImgCardProps = {
     imageUrl: string;
     alt: string;
     authorImage: string;

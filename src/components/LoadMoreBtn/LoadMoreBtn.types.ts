@@ -1,0 +1,3 @@
+type LoadMoreProps = {
+    turnPage:() => void;
+}

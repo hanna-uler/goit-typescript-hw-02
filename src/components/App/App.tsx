@@ -2,7 +2,7 @@ import css from './App.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import { Toaster } from 'react-hot-toast';
 import ImageGallery from '../ImageGallery/ImageGallery';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import fetchPictures from '../../pictures-api';
 import Loader from '../Loader/Loader';
@@ -39,7 +39,7 @@ export default function App() {
 
   Modal.setAppElement('#root');
 
-  const onSearchSubmit = async (searchQuery) => {
+  const onSearchSubmit = async (searchQuery: string) => {
     setPictures([]);
     setPage(1);
     setQuery(searchQuery);
@@ -70,15 +70,8 @@ export default function App() {
     };
     upgradeGallery();
   }, [query, page]);
-
-  const loaderRef = useRef(null);
-  useEffect(() => {
-  if (isLoading && loaderRef.current) {
-    loaderRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-  }, [isLoading]);
   
-  const openModal = (imageUrl, imageDescr) => {
+  const openModal = (imageUrl: string, imageDescr: string) => {
     setSelectedImage(imageUrl);
     setImgCaption(imageDescr);
     setIsModalOpen(true);
@@ -95,7 +88,7 @@ export default function App() {
       {isError && <ErrorMessage/>}
       {pictures.length > 0 && <ImageGallery picsArray={pictures} onImageClick={openModal} />}
       {isLoading && (
-        <div ref={loaderRef}>
+        <div>
           <Loader />
         </div>
       )}
