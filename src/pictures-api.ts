@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Img } from "./components/ImageGallery/ImageGallery.types";
 
 type ResponseData = {
     results: Img[];

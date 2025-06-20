@@ -1,3 +1,3 @@
-type LoadMoreProps = {
+export type LoadMoreProps = {
     turnPage:() => void;
 }

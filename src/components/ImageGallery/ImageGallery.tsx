@@ -1,5 +1,6 @@
 import css from "./ImageGallery.module.css"
 import ImageCard from "../ImageCard/ImageCard"
+import { ImgGalleryProps } from "./ImageGallery.types"
 
 export default function ImageGallery({picsArray, onImageClick}: ImgGalleryProps) {
     return (

@@ -1,3 +1,3 @@
-type SearchBarProps = {
+export type SearchBarProps = {
     onSubmit: (searchQuery: string) => void;
 }

@@ -1,5 +1,6 @@
 import css from "./ImageCard.module.css"
 import { IoLogoInstagram } from "react-icons/io5";
+import { ImgCardProps } from "./ImageCard.types";
 
 export default function ImageCard({imageUrl, alt, authorImage, authorName, portfolioUrl, instagram, likes }: ImgCardProps) {
     

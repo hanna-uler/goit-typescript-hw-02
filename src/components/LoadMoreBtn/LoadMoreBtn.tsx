@@ -1,4 +1,4 @@
-import css from "./LoadMoreBtn.module.css"
+import { LoadMoreProps } from "./LoadMoreBtn.types"
 
 export default function LoadMoreBtn({ turnPage }:LoadMoreProps) {
     return (

@@ -1,4 +1,4 @@
-type Img = {
+export type Img = {
     id: string;
     urls: {
         small: string;
@@ -16,7 +16,7 @@ type Img = {
     likes: number;
 }
 
-type ImgGalleryProps = {
+export type ImgGalleryProps = {
     picsArray: Img[];
     onImageClick: (url: string, alt: string) => void;
 }

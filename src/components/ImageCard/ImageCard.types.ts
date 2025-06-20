@@ -1,4 +1,4 @@
-type ImgCardProps = {
+export type ImgCardProps = {
     imageUrl: string;
     alt: string;
     authorImage: string;

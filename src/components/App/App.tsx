@@ -9,6 +9,7 @@ import Loader from '../Loader/Loader';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import NoResultsMessage from '../NoResultsMessage/NoResultsMessage';
 import Modal from 'react-modal'; 
+import { Img } from '../ImageGallery/ImageGallery.types';
 
 const customStyles = {
   overlay: {
